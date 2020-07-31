@@ -1,5 +1,5 @@
 package edu.es.eoi.mundobancario.service;
 
-public class ClllienteServiceImpl {
+public class ClienteServiceImpl {
 
 }
