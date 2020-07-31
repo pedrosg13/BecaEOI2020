@@ -1,0 +1,23 @@
+{
+  "654132": {
+    "nombre": "ProductoTEST2",
+    "referencia": "654132",
+    "precio": 50.0,
+    "descripcion": "descripcion",
+    "stock": 5
+  },
+  "123456": {
+    "nombre": "ProductoTEST",
+    "referencia": "123456",
+    "precio": 100.0,
+    "descripcion": "descripcion",
+    "stock": 5
+  },
+  "4858789865": {
+    "nombre": "Nike Air Jordan",
+    "referencia": "4858789865",
+    "precio": 100.0,
+    "descripcion": "Jordan shoes",
+    "stock": 10
+  }
+}
