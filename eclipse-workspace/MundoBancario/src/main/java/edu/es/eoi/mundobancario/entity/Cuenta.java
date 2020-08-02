@@ -16,7 +16,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "CUENTAS", schema = "BANCO")
+@Table(name = "cuentas", schema = "mundo_bancario")
 public class Cuenta {
 
 	@Id
@@ -24,15 +24,17 @@ public class Cuenta {
 	@Column(name = "num_cuenta")
 	private String numero_cuenta;
 
-	@Column(name = "SALDO")
+	@Column(name = "id_cliente")
+	private String id_cliente;
+
+	@Column(name = "alias")
+	private String alias;
+
+	@Column(name = "saldo")
 	private double saldo;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "dni", referencedColumnName = "DNI")
+	@JoinColumn(name = "cliente", referencedColumnName = "id_cliente")
 	private Cliente cliente;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "IDBANCO", referencedColumnName = "ID")
-	private Banco banco;
 
 }
