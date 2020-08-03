@@ -21,16 +21,14 @@ public class Cuenta {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "num_cuenta")
-	private String numero_cuenta;
-
-	@Column(name = "id_cliente")
-	private String id_cliente;
-
-	@Column(name = "alias")
+	private Integer num_cuenta;
+	@Column
+	private Integer id_cliente;
+	@Column
+	private String id_tipos_movimiento;
+	@Column
 	private String alias;
-
-	@Column(name = "saldo")
+	@Column
 	private double saldo;
 
 	@ManyToOne(fetch = FetchType.LAZY)

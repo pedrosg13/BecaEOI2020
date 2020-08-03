@@ -17,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "clientes")
+@Table(name = "clientes", schema = "mundo_bancario")
 public class Cliente {
 	
 	@Id
