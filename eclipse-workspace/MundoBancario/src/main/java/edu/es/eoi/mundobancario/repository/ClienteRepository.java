@@ -1,10 +1,15 @@
 package edu.es.eoi.mundobancario.repository;
 
-public class ClienteRepository {
+import java.util.Optional;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-	}
+import edu.es.eoi.mundobancario.entity.Cliente;
+
+@Repository
+public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
+	
+	Void save(Optional<Cliente> clienteToUpdate);
 
 }

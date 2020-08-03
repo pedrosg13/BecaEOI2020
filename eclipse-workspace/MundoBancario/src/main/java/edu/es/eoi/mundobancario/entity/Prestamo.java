@@ -43,5 +43,61 @@ public class Prestamo {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
 	private List<Cuenta> cuentas;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getNum_cuenta() {
+		return num_cuenta;
+	}
+
+	public void setNum_cuenta(Integer num_cuenta) {
+		this.num_cuenta = num_cuenta;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+	public double getImporte() {
+		return importe;
+	}
+
+	public void setImporte(double importe) {
+		this.importe = importe;
+	}
+
+	public String getPlazos() {
+		return plazos;
+	}
+
+	public void setPlazos(String plazos) {
+		this.plazos = plazos;
+	}
+
+	public List<Cuenta> getCuentas() {
+		return cuentas;
+	}
+
+	public void setCuentas(List<Cuenta> cuentas) {
+		this.cuentas = cuentas;
+	}
+
 	
 }

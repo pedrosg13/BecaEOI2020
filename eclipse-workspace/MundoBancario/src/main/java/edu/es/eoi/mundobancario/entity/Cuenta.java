@@ -35,4 +35,52 @@ public class Cuenta {
 	@JoinColumn(name = "cliente", referencedColumnName = "id_cliente")
 	private Cliente cliente;
 
+	public Integer getNum_cuenta() {
+		return num_cuenta;
+	}
+
+	public void setNum_cuenta(Integer num_cuenta) {
+		this.num_cuenta = num_cuenta;
+	}
+
+	public Integer getId_cliente() {
+		return id_cliente;
+	}
+
+	public void setId_cliente(Integer id_cliente) {
+		this.id_cliente = id_cliente;
+	}
+
+	public String getId_tipos_movimiento() {
+		return id_tipos_movimiento;
+	}
+
+	public void setId_tipos_movimiento(String id_tipos_movimiento) {
+		this.id_tipos_movimiento = id_tipos_movimiento;
+	}
+
+	public String getAlias() {
+		return alias;
+	}
+
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
 }

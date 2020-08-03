@@ -29,11 +29,51 @@ public class Amortizacion extends Prestamo {
 	@Column
 	private Date fecha;
 	@Column
-	private String importe;
+	private double importe;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "amortizaciones", referencedColumnName = "id_prestamos")
 	private Cliente cliente;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getId_prestamos() {
+		return id_prestamos;
+	}
+
+	public void setId_prestamos(String id_prestamos) {
+		this.id_prestamos = id_prestamos;
+	}
+
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+	public double getImporte() {
+		return importe;
+	}
+
+	public void setImporte(double importe) {
+		this.importe = importe;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 	
 
 }

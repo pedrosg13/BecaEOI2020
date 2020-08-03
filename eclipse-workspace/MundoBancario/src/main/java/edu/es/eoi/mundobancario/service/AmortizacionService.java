@@ -1,14 +1,19 @@
 package edu.es.eoi.mundobancario.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
 
-import edu.es.eoi.mundobancario.repository.AmortizacionRepository;
+import edu.es.eoi.mundobancario.entity.Amortizacion;
 
-@Service
-public class AmortizacionService {
-	
-	@Autowired
-	AmortizacionServiceImpl service;
+public interface AmortizacionService {
+	public List<Amortizacion> findAllAmortizacion();
+
+	public Optional<Amortizacion> findAmortizacionById(Long id);
+
+	public Amortizacion saveAmortizacion(Amortizacion customerNew);
+
+	public String deleteAmortizacion(Long id);
+
+	public String updateAmortizacion(Amortizacion customerNew);
 
 }

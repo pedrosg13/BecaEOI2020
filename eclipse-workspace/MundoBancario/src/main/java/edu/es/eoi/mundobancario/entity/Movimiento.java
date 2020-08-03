@@ -43,4 +43,68 @@ public class Movimiento {
 	@ManyToOne(targetEntity = Cliente.class)
 	private Cliente Cliente;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNum_cuenta() {
+		return num_cuenta;
+	}
+
+	public void setNum_cuenta(String num_cuenta) {
+		this.num_cuenta = num_cuenta;
+	}
+
+	public String getId_tipos_movimiento() {
+		return id_tipos_movimiento;
+	}
+
+	public void setId_tipos_movimiento(String id_tipos_movimiento) {
+		this.id_tipos_movimiento = id_tipos_movimiento;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getImporte() {
+		return importe;
+	}
+
+	public void setImporte(String importe) {
+		this.importe = importe;
+	}
+
+	public List<Amortizacion> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Amortizacion> products) {
+		this.products = products;
+	}
+
+	public Cliente getCliente() {
+		return Cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		Cliente = cliente;
+	}
+
 }
