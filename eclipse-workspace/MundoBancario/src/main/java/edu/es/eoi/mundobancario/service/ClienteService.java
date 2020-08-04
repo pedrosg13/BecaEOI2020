@@ -1,19 +1,19 @@
 package edu.es.eoi.mundobancario.service;
 
 import java.util.List;
-import java.util.Optional;
 
+import edu.es.eoi.mundobancario.dto.DtoEntity;
 import edu.es.eoi.mundobancario.entity.Cliente;
 
 public interface ClienteService {
-	public List<Cliente> findAllAmortizacion();
+	public List<Cliente> findAll();
 
-	public Optional<Cliente> findAmortizacionById(Long id);
+	public DtoEntity findClienteById(Integer id);
 
-	public Cliente saveAmortizacion(Cliente customerNew);
+	public DtoEntity saveCliente(Cliente customerNew);
 
-	public String deleteAmortizacion(Long id);
+	public String deleteCliente(Integer id);
 
-	public String updateAmortizacion(Cliente customerNew);
+	public String updateCliente(Cliente customerNew);
 
 }

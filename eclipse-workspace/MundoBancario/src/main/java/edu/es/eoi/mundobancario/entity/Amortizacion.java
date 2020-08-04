@@ -24,16 +24,19 @@ public class Amortizacion extends Prestamo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column
 	private String id_prestamos;
+	
 	@Column
 	private Date fecha;
+	
 	@Column
 	private double importe;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "amortizaciones", referencedColumnName = "id_prestamos")
-	private Cliente cliente;
+	private Prestamo prestamo;
 
 	public Integer getId() {
 		return id;
@@ -67,12 +70,12 @@ public class Amortizacion extends Prestamo {
 		this.importe = importe;
 	}
 
-	public Cliente getCliente() {
-		return cliente;
+	public Prestamo getCliente() {
+		return prestamo;
 	}
 
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
+	public void setCliente(Prestamo prestamo) {
+		this.prestamo = prestamo;
 	}
 	
 

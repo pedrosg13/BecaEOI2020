@@ -1,7 +1,6 @@
 package edu.es.eoi.mundobancario.entity;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +8,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -40,8 +40,9 @@ public class Prestamo {
 	@Column
 	private String plazos;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
-	private List<Cuenta> cuentas;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "prestamos", referencedColumnName = "id_cliente")
+	private Cliente cliente;
 
 	public Integer getId() {
 		return id;
@@ -91,12 +92,12 @@ public class Prestamo {
 		this.plazos = plazos;
 	}
 
-	public List<Cuenta> getCuentas() {
-		return cuentas;
+	public Cliente getCuentas() {
+		return cliente;
 	}
 
-	public void setCuentas(List<Cuenta> cuentas) {
-		this.cuentas = cuentas;
+	public void setCuentas(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	

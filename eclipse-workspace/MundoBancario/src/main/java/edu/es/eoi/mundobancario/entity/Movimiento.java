@@ -26,14 +26,19 @@ public class Movimiento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column
 	private String num_cuenta;
+	
 	@Column
 	private String id_tipos_movimiento;
+	
 	@Column
 	private String descripcion;
+	
 	@Column
 	private Date fecha;
+	
 	@Column
 	private String importe;
 

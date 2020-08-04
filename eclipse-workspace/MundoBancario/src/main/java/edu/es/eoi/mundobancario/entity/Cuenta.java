@@ -22,12 +22,16 @@ public class Cuenta {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer num_cuenta;
+	
 	@Column
 	private Integer id_cliente;
+	
 	@Column
 	private String id_tipos_movimiento;
+	
 	@Column
 	private String alias;
+	
 	@Column
 	private double saldo;
 

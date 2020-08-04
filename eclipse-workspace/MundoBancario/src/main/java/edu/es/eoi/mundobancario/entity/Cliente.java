@@ -38,6 +38,12 @@ public class Cliente {
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
 	private List<Cuenta> cuentas;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
+	private List<Movimiento> movimientos;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
+	private List<Prestamo> prestamos;
 
 	public Integer getId() {
 		return id;
