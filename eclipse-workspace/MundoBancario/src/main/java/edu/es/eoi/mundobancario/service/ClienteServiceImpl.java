@@ -1,7 +1,6 @@
 package edu.es.eoi.mundobancario.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,13 +15,13 @@ public class ClienteServiceImpl implements ClienteService {
 	ClienteRepository clienteRepository;
 
 	@Override
-	public List<Cliente> findAllCliente() {
+	public List<Cliente> findAll() {
 		return clienteRepository.findAll();
 	}
 
 	@Override
-	public Optional<Cliente> findClienteById(Integer id) {
-		Optional<Cliente> cliente = clienteRepository.findById(id);
+	public Cliente findClienteById(Integer id) {
+		Cliente cliente = clienteRepository.findById(id).get();
 		return cliente;
 	}
 
@@ -35,12 +34,12 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public String deleteCliente(Integer id) {
+	public void deleteCliente(Integer id) {
 		if (clienteRepository.findById(id).isPresent()) {
 			clienteRepository.deleteById(id);
-			return "Cliente eliminado correctamente.";
+			System.out.println("Cliente eliminado correctamente.");
 		}
-		return "Error! El cliente no existe!";
+		System.out.println("Error! El cliente no existe!");
 	}
 
 	@Override
@@ -48,10 +47,6 @@ public class ClienteServiceImpl implements ClienteService {
 		Integer num = clienteUpdate.getId();
 		if (clienteRepository.findById(num).isPresent()) {
 			Cliente clienteToUpdate = new Cliente();
-			clienteToUpdate.setId(clienteUpdate.getId());
-			clienteToUpdate.setUsuario(clienteUpdate.getUsuario());
-			clienteToUpdate.setPass(clienteUpdate.getPass());
-			clienteToUpdate.setNombre(clienteUpdate.getNombre());
 			clienteToUpdate.setEmail(clienteUpdate.getEmail());
 		}
 		return "Error al modificar el cliente";

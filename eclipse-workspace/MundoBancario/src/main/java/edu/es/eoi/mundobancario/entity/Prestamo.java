@@ -100,5 +100,7 @@ public class Prestamo {
 		this.cliente = cliente;
 	}
 
-	
+	public void setPrestamo(Object object) {
+	}
+
 }

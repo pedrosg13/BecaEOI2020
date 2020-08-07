@@ -17,7 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "cuentas", schema = "mundo_bancario")
-public class Cuenta {
+public class Cuenta  extends Cliente{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

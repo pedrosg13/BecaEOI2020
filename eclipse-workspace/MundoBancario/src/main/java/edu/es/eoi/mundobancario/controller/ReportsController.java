@@ -1,10 +1,13 @@
 package edu.es.eoi.mundobancario.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import edu.es.eoi.mundobancario.entity.Cliente;
 import edu.es.eoi.mundobancario.service.ClienteService;
 import edu.es.eoi.mundobancario.service.PrestamoService;
 
@@ -13,10 +16,15 @@ public class ReportsController {
 	
 	@Autowired
 	ClienteService ClienteService;
+	
+	@Autowired
 	PrestamoService PrestamoService;
 	
 	//Devuelve los datos del cliente junto al listado de las cuentas de las que dispone y sus movs
 	@GetMapping("reports/clientes/{id}")
+ 	public ResponseEntity<Cliente> findClienteByIdUsuario(@PathVariable Integer Id) {
+		return ResponseEntity.ok(service.findClienteById(Id));
+	}
 	
 	//Imprimirá un PDF con los datos del servicio anterior: EOI_BANK_CLIENTE_000.pdf en una ruta estática, los importes de los movimientos de tipo ingreso o préstamo aparecerán de color verde, mientras que el resto de importes se mostrarán en rojo y en negativo, se valorará que tenga una apariencia mínimamente cuidada.
 	@PostMapping("reports/clientes/{id}")

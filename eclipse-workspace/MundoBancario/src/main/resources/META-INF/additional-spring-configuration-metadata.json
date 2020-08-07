@@ -1,0 +1,82 @@
+{"properties": [
+  {
+    "name": "datasource",
+    "type": "java.lang.String",
+    "description": "A description for 'datasource'"
+  },
+  {
+    "name": "spring",
+    "type": "java.lang.String",
+    "description": "A description for 'spring'"
+  },
+  {
+    "name": "username",
+    "type": "java.lang.String",
+    "description": "A description for 'username'"
+  },
+  {
+    "name": "password",
+    "type": "java.lang.String",
+    "description": "A description for 'password'"
+  },
+  {
+    "name": "url",
+    "type": "java.lang.String",
+    "description": "A description for 'url'"
+  },
+  {
+    "name": "jpa",
+    "type": "java.lang.String",
+    "description": "A description for 'jpa'"
+  },
+  {
+    "name": "database-platform",
+    "type": "java.lang.String",
+    "description": "A description for 'database-platform'"
+  },
+  {
+    "name": "hibernate",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate'"
+  },
+  {
+    "name": "port",
+    "type": "java.lang.String",
+    "description": "A description for 'port'"
+  },
+  {
+    "name": "ddl-auto",
+    "type": "java.lang.String",
+    "description": "A description for 'ddl-auto'"
+  },
+  {
+    "name": "server",
+    "type": "java.lang.String",
+    "description": "A description for 'server'"
+  },
+  {
+    "name": "show-sql",
+    "type": "java.lang.String",
+    "description": "A description for 'show-sql'"
+  },
+  {
+    "name": "initialization-mode",
+    "type": "java.lang.String",
+    "description": "A description for 'initialization-mode'"
+  },
+  {
+    "name": "generate-ddl",
+    "type": "java.lang.String",
+    "description": "A description for 'generate-ddl'"
+  },
+  {
+    "name": "main",
+    "type": "java.lang.String",
+    "description": "A description for 'main'"
+  },
+  {
+    "name": "allow-bean-definition-overriding",
+    "type": "java.lang.String",
+    "description": "A description for 'allow-bean-definition-overriding'"
+  }
+]}
